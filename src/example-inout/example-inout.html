@@ -1,0 +1,28 @@
+<script type="text/x-red" data-template-name="example-inout">
+  <div class="form-row">
+    <label for="node-input-number">Number</label>
+    <input type="text" id="node-input-number">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="example-inout">
+  <h1>Example INOUT</h1>
+  <p>Accepts input from <code>msg.payload</code> and multiplies that <b>number</b> times (default: 3)</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('example-inout',{
+        category: 'examples',
+        color: "#ceccee",
+        defaults: {
+            number: {value:"3", required: true, validate: RED.validators.number()},
+        },
+        inputs:1,
+        outputs:1,
+        icon: "bridge.png",
+        paletteLabel: "example inout",
+        label: function() {
+            return "inout"
+        }
+    });
+</script>

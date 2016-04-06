@@ -1,0 +1,19 @@
+{
+  "name": "node-red-contrib-base",
+  "version": "0.0.1",
+  "description": "A base node for your development needs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matti/node-red-contrib-base.git"
+  },
+  "scripts": {
+  },
+  "license": "MIT",
+  "node-red": {
+    "nodes": {
+      "example-in": "src/example-in/example-in.js",
+      "example-out": "src/example-out/example-out.js",
+      "example-inout": "src/example-inout/example-inout.js"
+    }
+  }
+}
