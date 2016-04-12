@@ -13,7 +13,9 @@
     "nodes": {
       "example-in": "src/example-in/example-in.js",
       "example-out": "src/example-out/example-out.js",
-      "example-inout": "src/example-inout/example-inout.js"
+      "example-inout": "src/example-inout/example-inout.js",
+      "example-config": "src/example-config/example-config.js",
+      "example-config-secrets": "src/example-config-secrets/example-config-secrets.js"
     }
   }
 }

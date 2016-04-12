@@ -1,0 +1,49 @@
+<script type="text/x-red" data-template-name="example-config">
+<div class="form-row">
+     <label for="node-input-secrets"><i class="icon-tag"></i> Secrets</label>
+     <input type="text" id="node-input-secrets">
+ </div>
+
+  <div class="form-row">
+    <label for="node-input-number">Number</label>
+    <input type="text" id="node-input-number">
+  </div>
+
+  <div class="form-row">
+    <label for="node-input-required">Required</label>
+    <input type="text" id="node-input-required" placeholder="This is required">
+  </div>
+
+  <div class="form-row">
+    <label for="node-input-name">Name</label>
+    <input type="text" id="node-input-name">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="example-config">
+  <h1>Example Config</h1>
+</script>
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('example-config',{
+        category: 'examples',
+        color: "#caccaa",
+        defaults: {
+            number: {value:"3", required: true, validate: RED.validators.number()},
+            required: {value: "required value", required: true},
+            name: {value: "default name"},
+            secrets: { type: "example-config-secrets" }
+        },
+        inputs:0,
+        outputs:1,
+        icon: "alert.png",
+        paletteLabel: "example config",
+        label: function() {
+            return this.name||"name is not configured"
+        },
+        labelStyle: function() {
+            return this.name?"node_label_italic":"";
+        }
+    });
+</script>
